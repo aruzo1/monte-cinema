@@ -146,6 +146,12 @@ input {
   border-radius: 0;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
 /* Apply cursor pointer to button elements */
 button,
 [type="button"],

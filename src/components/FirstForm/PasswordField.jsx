@@ -1,5 +1,5 @@
 import usePasswordField from "../../hooks/usePasswordField";
-import Field from "../ui/Field";
+import Field from "../shared/Field";
 import Eye from "./Eye";
 import style from "./style.module.css";
 
@@ -10,21 +10,15 @@ const validators = [
 ];
 
 function PasswordField() {
-  const {
-    password,
-    setPassword,
-    show,
-    toggleShow,
-    isPasswordValid,
-    isValidatorValid,
-  } = usePasswordField(validators);
+  const { show, toggleShow, isPasswordValid, isValidatorValid } =
+    usePasswordField(validators);
 
   return (
     <Field
-      value={password}
-      setValue={setPassword}
       name="password"
+      label="PASSWORD"
       type={show ? "text" : "password"}
+      placeholder="Enter your password"
       valid={isPasswordValid()}
       required
     >
