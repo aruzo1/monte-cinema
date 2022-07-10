@@ -1,0 +1,17 @@
+.validators {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  margin-top: 8px;
+  list-style: none;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--gray-dark);
+}
+.validators li.invalid {
+  color: var(--danger);
+}
+.validators li.valid {
+  color: var(--success);
+}
