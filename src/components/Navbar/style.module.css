@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+  background: #fff;
+}
+
+.motto {
+  font-family: "Roboto Mono";
+  font-weight: 500;
+}
+.motto span {
+  color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .motto {
+    display: none;
+  }
+}
