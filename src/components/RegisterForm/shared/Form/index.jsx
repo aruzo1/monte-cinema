@@ -1,4 +1,4 @@
-import useRegisterForm from "../../../hooks/useRegisterForm";
+import useRegisterForm from "../../../../hooks/useRegisterForm";
 import style from "./style.module.css";
 
 function Form({ title, children }) {

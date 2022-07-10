@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import useRegisterFormReducer from "../hooks/useRegisterFormReducer";
+import useRegisterFormReducer from "../../hooks/useRegisterFormReducer";
 import FirstForm from "./FirstForm";
 import SecondForm from "./SecondForm";
 
