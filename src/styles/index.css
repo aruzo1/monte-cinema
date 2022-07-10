@@ -1,0 +1,12 @@
+@import "reset.css";
+
+:root {
+  --primary: #ec1115;
+  --primary-light: #f47073;
+  --primary-dark: #a60c0e;
+  --gray: #85868d;
+  --gray-light: #f7f7f7;
+  --gray-dark: #343541;
+  --danger: #ec1115;
+  --success: #27ae60;
+}
