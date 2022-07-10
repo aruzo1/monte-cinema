@@ -1,4 +1,5 @@
 import useRegisterForm from "../../../../hooks/useRegisterForm";
+import Title from "../Title";
 import style from "./style.module.css";
 
 function Form({ title, children }) {
@@ -11,9 +12,7 @@ function Form({ title, children }) {
 
   return (
     <div className={style.wrapper}>
-      <h1 className={style.title}>
-        {title.text} <span>{title.highlight}</span>
-      </h1>
+      <Title {...title} />
       <form className={style.form} onSubmit={submitHandler}>
         {children}
       </form>
