@@ -1,7 +1,8 @@
 import { useState } from "react";
+import useRegisterForm from "./useRegisterForm";
 
 function usePasswordField(validators) {
-  const [password, setPassword] = useState("");
+  const { values } = useRegisterForm();
   const [show, setShow] = useState(false);
 
   function toggleShow() {
@@ -17,12 +18,10 @@ function usePasswordField(validators) {
 
   function isValidatorValid(expression) {
     const regex = new RegExp(expression, "g");
-    return regex.test(password);
+    return regex.test(values["password"]);
   }
 
   return {
-    password,
-    setPassword,
     show,
     toggleShow,
     isPasswordValid,

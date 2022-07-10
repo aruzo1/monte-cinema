@@ -1,18 +1,15 @@
-import { useState } from "react";
-import FieldGroup from "../ui/FieldGroup";
-import Field from "../ui/Field";
+import FieldGroup from "../shared/FieldGroup";
+import Field from "../shared/Field";
 import PasswordField from "./PasswordField";
 
 function Fields() {
-  const [email, setEmail] = useState("");
-
   return (
     <FieldGroup>
       <Field
-        value={email}
-        setValue={setEmail}
         name="email"
+        label="EMAIL"
         type="email"
+        placeholder="Something ending with monterail.com"
         required
       />
       <PasswordField />
