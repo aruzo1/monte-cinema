@@ -1,0 +1,40 @@
+.field label {
+  text-transform: uppercase;
+  font-family: "Roboto Mono";
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary-light);
+}
+
+.field input {
+  width: 100%;
+  margin-top: 12px;
+  padding: 16px 64px 16px 24px;
+  border-radius: 8px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid transparent;
+  background: var(--gray-light);
+  transition: 0.15s;
+}
+.field input.invalid {
+  border-color: var(--danger);
+}
+.field input::placeholder {
+  color: var(--gray);
+}
+.field input:hover {
+  background: #e5e5e5;
+}
+.field input:focus {
+  background: rgba(47, 128, 237, 0.1);
+  border-color: #2f80ed;
+}
+
+.field svg {
+  cursor: pointer;
+  margin-left: -48px;
+  margin-bottom: -10px;
+}
