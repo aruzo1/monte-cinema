@@ -1,0 +1,17 @@
+.title {
+  font-family: "Eczar";
+  font-size: 80px;
+  font-weight: 600;
+  color: var(--gray-dark);
+}
+.title span {
+  display: block;
+  color: var(--gray);
+}
+
+@media (max-width: 600px) {
+  .title {
+    text-align: center;
+    font-size: 40px;
+  }
+}
