@@ -8,9 +8,11 @@ function Fields() {
       <Field
         name="email"
         label="EMAIL"
-        type="email"
-        placeholder="Something ending with monterail.com"
-        required
+        input={{
+          type: "email",
+          placeholder: "Something ending with monterail.com",
+          required: true,
+        }}
       />
       <PasswordField />
     </FieldGroup>

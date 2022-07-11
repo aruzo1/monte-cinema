@@ -1,0 +1,31 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox label {
+  margin-left: 12px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+}
+.checkbox label a {
+  text-decoration: underline;
+}
+
+.checkbox input {
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  padding: 12px;
+  border: 0.75px solid #aeaeb3;
+  border-radius: 8px;
+}
+.checkbox input:checked::after {
+  content: "\2714";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary);
+}
