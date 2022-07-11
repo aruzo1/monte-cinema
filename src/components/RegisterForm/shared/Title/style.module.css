@@ -3,7 +3,6 @@
   font-size: 80px;
   font-weight: 600;
   color: var(--gray-dark);
-  width: max-content;
 }
 .title span {
   display: block;
