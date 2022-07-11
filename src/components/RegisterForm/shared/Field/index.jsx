@@ -2,7 +2,7 @@ import useRegisterForm from "../../../../hooks/useRegisterForm";
 import style from "./style.module.css";
 
 function Field(props) {
-  const { children, label, name, type, placeholder, valid, required } = props;
+  const { children, label, name, valid, input } = props;
   const { values, dispatch } = useRegisterForm();
 
   function valueHandler(e) {
@@ -16,13 +16,12 @@ function Field(props) {
     <div className={style.field}>
       <label htmlFor={name}>{label}</label>
       <input
+        {...input}
         id={name}
+        name={name}
         className={valid === false ? style.invalid : ""}
-        placeholder={placeholder}
-        type={type}
         value={values[name]}
         onChange={valueHandler}
-        required={required}
       />
       {children}
     </div>

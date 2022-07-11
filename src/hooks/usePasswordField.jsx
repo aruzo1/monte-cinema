@@ -1,31 +1,27 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import useRegisterForm from "./useRegisterForm";
 
-function usePasswordField(validators) {
+function usePasswordField(pattern) {
   const { values } = useRegisterForm();
   const [show, setShow] = useState(false);
+
+  const valid = useMemo(() => {
+    return new RegExp(pattern).test(values.password);
+  }, [pattern, values]);
+
+  function validatorValid(expression) {
+    return new RegExp(expression).test(values.password);
+  }
 
   function toggleShow() {
     setShow(!show);
   }
 
-  function isPasswordValid() {
-    for (const { expression } of validators) {
-      if (!isValidatorValid(expression)) return false;
-    }
-    return true;
-  }
-
-  function isValidatorValid(expression) {
-    const regex = new RegExp(expression, "g");
-    return regex.test(values["password"]);
-  }
-
   return {
     show,
     toggleShow,
-    isPasswordValid,
-    isValidatorValid,
+    valid,
+    validatorValid,
   };
 }
 
